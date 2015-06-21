@@ -52,7 +52,7 @@ mean_std$Activity[mean_std$Activity==i]<-as.character(activity_labels[i,2])
 mean_std$Activity <- as.factor(mean_std$Activity)
 
 ##saving the file
-write.table(mean_std, file = "Question4.txt", row.names = FALSE)
+##write.table(mean_std, file = "Question4.txt", row.names = FALSE)
 
 
 # question 4

@@ -16,3 +16,7 @@ Using the data from  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfile
   * Appropriately labels the data set with descriptive variable names. 
 
   * From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+## Practical information
+
+The  script takes the original files from the working directory. The script saves the data frame from step 5 in the working directory as "Question5.txt"
