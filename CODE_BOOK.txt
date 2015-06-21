@@ -1,0 +1,138 @@
+Feature Selection 
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+timeBodyAccelerometer-XYZ
+timeGravityAccelerometer-XYZ
+timeBodyAccelerometerJerk-XYZ
+timeBodyGyroscope-XYZ
+timeBodyGyroscopeJerk-XYZ
+timeBodyAccelerometerMagnitude
+timeGravityAccelerometerMagnitude
+timeBodyAccelerometerJerkMagnitude
+timeBodyGyroscopeMagnitude
+timeBodyGyroscopeJerkMagnitude
+frequencyBodyAccelerometer-XYZ
+frequencyBodyAccelerometerJerk-XYZ
+frequencyBodyGyroscope-XYZ
+frequencyBodyAccelerometerMagnitude
+frequencyBodyAccelerometerJerkMagnitude
+frequencyBodyGyroscopeMagnitude
+frequencyBodyGyroscopeJerkMagnitude
+
+The set of variables that were estimated from these signals and wich studied in this dataset are: 
+
+mean(): Mean value
+std(): Standard deviation
+
+
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+gravityMean
+timeBodyAccelerometerMean
+timeBodyAccelerometerJerkMean
+timeBodyGyroscopeMean
+timeBodyGyroscopeJerkMean
+
+-------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+- In this dataset we only focused on "Mean" and "standard Deviation" Variables
+- The different variables were then averaged for each subject and activity:
+- Here is the complete list of variables of the final dataset
+
+[1] "Subject_ID"                                        
+[2] "Activity"                                          
+[3] "TimeBodyAccelerometer-mean()-X"                    
+[4] "TimeBodyAccelerometer-mean()-Y"                    
+[5] "TimeBodyAccelerometer-mean()-Z"                    
+[6] "TimeGravityAccelerometer-mean()-X"                 
+[7] "TimeGravityAccelerometer-mean()-Y"                 
+[8] "TimeGravityAccelerometer-mean()-Z"                 
+[9] "TimeBodyAccelerometerJerk-mean()-X"                
+[10] "TimeBodyAccelerometerJerk-mean()-Y"                
+[11] "TimeBodyAccelerometerJerk-mean()-Z"                
+[12] "TimeBodyGyroscope-mean()-X"                        
+[13] "TimeBodyGyroscope-mean()-Y"                        
+[14] "TimeBodyGyroscope-mean()-Z"                        
+[15] "TimeBodyGyroscopeJerk-mean()-X"                    
+[16] "TimeBodyGyroscopeJerk-mean()-Y"                    
+[17] "TimeBodyGyroscopeJerk-mean()-Z"                    
+[18] "TimeBodyAccelerometerMagnitude-mean()"             
+[19] "TimeGravityAccelerometerMagnitude-mean()"          
+[20] "TimeBodyAccelerometerJerkMagnitude-mean()"         
+[21] "TimeBodyGyroscopeMagnitude-mean()"                 
+[22] "TimeBodyGyroscopeJerkMagnitude-mean()"             
+[23] "FrequencyBodyAccelerometer-mean()-X"               
+[24] "FrequencyBodyAccelerometer-mean()-Y"               
+[25] "FrequencyBodyAccelerometer-mean()-Z"               
+[26] "FrequencyBodyAccelerometer-meanFreq()-X"           
+[27] "FrequencyBodyAccelerometer-meanFreq()-Y"           
+[28] "FrequencyBodyAccelerometer-meanFreq()-Z"           
+[29] "FrequencyBodyAccelerometerJerk-mean()-X"           
+[30] "FrequencyBodyAccelerometerJerk-mean()-Y"           
+[31] "FrequencyBodyAccelerometerJerk-mean()-Z"           
+[32] "FrequencyBodyAccelerometerJerk-meanFreq()-X"       
+[33] "FrequencyBodyAccelerometerJerk-meanFreq()-Y"       
+[34] "FrequencyBodyAccelerometerJerk-meanFreq()-Z"       
+[35] "FrequencyBodyGyroscope-mean()-X"                   
+[36] "FrequencyBodyGyroscope-mean()-Y"                   
+[37] "FrequencyBodyGyroscope-mean()-Z"                   
+[38] "FrequencyBodyGyroscope-meanFreq()-X"               
+[39] "FrequencyBodyGyroscope-meanFreq()-Y"               
+[40] "FrequencyBodyGyroscope-meanFreq()-Z"               
+[41] "FrequencyBodyAccelerometerMagnitude-mean()"        
+[42] "FrequencyBodyAccelerometerMagnitude-meanFreq()"    
+[43] "FrequencyBodyAccelerometerJerkMagnitude-mean()"    
+[44] "FrequencyBodyAccelerometerJerkMagnitude-meanFreq()"
+[45] "FrequencyBodyGyroscopeMagnitude-mean()"            
+[46] "FrequencyBodyGyroscopeMagnitude-meanFreq()"        
+[47] "FrequencyBodyGyroscopeJerkMagnitude-mean()"        
+[48] "FrequencyBodyGyroscopeJerkMagnitude-meanFreq()"    
+[49] "angle(tBodyAccelerometerMean,gravity)"             
+[50] "angle(tBodyAccelerometerJerkMean),gravityMean)"    
+[51] "angle(tBodyGyroscopeMean,gravityMean)"             
+[52] "angle(tBodyGyroscopeJerkMean,gravityMean)"         
+[53] "angle(X,gravityMean)"                              
+[54] "angle(Y,gravityMean)"                              
+[55] "angle(Z,gravityMean)"                              
+[56] "TimeBodyAccelerometer-std()-X"                     
+[57] "TimeBodyAccelerometer-std()-Y"                     
+[58] "TimeBodyAccelerometer-std()-Z"                     
+[59] "TimeGravityAccelerometer-std()-X"                  
+[60] "TimeGravityAccelerometer-std()-Y"                  
+[61] "TimeGravityAccelerometer-std()-Z"                  
+[62] "TimeBodyAccelerometerJerk-std()-X"                 
+[63] "TimeBodyAccelerometerJerk-std()-Y"                 
+[64] "TimeBodyAccelerometerJerk-std()-Z"                 
+[65] "TimeBodyGyroscope-std()-X"                         
+[66] "TimeBodyGyroscope-std()-Y"                         
+[67] "TimeBodyGyroscope-std()-Z"                         
+[68] "TimeBodyGyroscopeJerk-std()-X"                     
+[69] "TimeBodyGyroscopeJerk-std()-Y"                     
+[70] "TimeBodyGyroscopeJerk-std()-Z"                     
+[71] "TimeBodyAccelerometerMagnitude-std()"              
+[72] "TimeGravityAccelerometerMagnitude-std()"           
+[73] "TimeBodyAccelerometerJerkMagnitude-std()"          
+[74] "TimeBodyGyroscopeMagnitude-std()"                  
+[75] "TimeBodyGyroscopeJerkMagnitude-std()"              
+[76] "FrequencyBodyAccelerometer-std()-X"                
+[77] "FrequencyBodyAccelerometer-std()-Y"                
+[78] "FrequencyBodyAccelerometer-std()-Z"                
+[79] "FrequencyBodyAccelerometerJerk-std()-X"            
+[80] "FrequencyBodyAccelerometerJerk-std()-Y"            
+[81] "FrequencyBodyAccelerometerJerk-std()-Z"            
+[82] "FrequencyBodyGyroscope-std()-X"                    
+[83] "FrequencyBodyGyroscope-std()-Y"                    
+[84] "FrequencyBodyGyroscope-std()-Z"                    
+[85] "FrequencyBodyAccelerometerMagnitude-std()"         
+[86] "FrequencyBodyAccelerometerJerkMagnitude-std()"     
+[87] "FrequencyBodyGyroscopeMagnitude-std()"             
+[88] "FrequencyBodyGyroscopeJerkMagnitude-std()"   
